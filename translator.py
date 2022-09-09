@@ -120,12 +120,12 @@ def bulk_trans(text:str, num_trans:int=4):
   :return: str
   """
   curr=text
-  curr=ts.google(curr, to_language='zh-CN', sleep_seconds=0.051)
-  for x in range(num_trans):
-    #generate random language
-    to_lang=langs_map[random.randint(0, 106)]
-    curr=ts.google(curr, to_language=to_lang, sleep_seconds=0.051)
-    print(to_lang)
   curr=ts.google(curr, to_language='en', sleep_seconds=0.051)
-  print(curr)
+  # for x in range(num_trans):
+  #   #generate random language
+  #   to_lang=langs_map[random.randint(0, 106)]
+  #   curr=ts.google(curr, to_language=to_lang, sleep_seconds=0.051)
+  #   print(to_lang)
+  # curr=ts.google(curr, to_language='en', sleep_seconds=0.051)
+  # print(curr)
   return curr
